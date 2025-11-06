@@ -1,215 +1,239 @@
 /* ========================
-Root + Reset
+Root Variables
 ======================== */
 :root {
---primary-blue: #245f95;
---nav-hover: #74787c;
---card-border: #cfcfcf;
---body-bg: #ffffff;
---footer-bg: #245f95;
---card-radius: 12px;
---max-width: 1100px;
+  --primary-blue: #245f95;
+  --nav-hover: #74787c;
+  --card-border: #cfcfcf;
+  --body-bg: #f9f9f9;
+  --footer-bg: #245f95;
+  --card-radius: 12px;
+  --max-width: 1100px;
+  --card-bg-light: #ffffff;
+  --card-bg-alt: #f0f4f8;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-font-family: 'Merriweather', serif;
-background: var(--body-bg);
-color: #222;
-line-height: 1.6;
-}
-
 
 /* ========================
-Header + Navigation
+Global Reset & Typography
 ======================== */
-header {
-background: var(--primary-blue);
-color: #fff;
-text-align: center;
-padding: 15px 0;
-box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-padding-bottom: 0;
-margin-bottom: 0;
-height: 100px;
-width: 100%;
-}
-#course-title {
-display: block;
-font-size: 1.55rem;
-font-weight: 600;
-letter-spacing: 0.5px;
-margin-bottom: 0.75rem;
-margin: 0;
-}
-nav {
-    background-color: #74787c;
-    padding: 1rem 0;
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-nav ul {
-list-style: none;
-display: flex;
-justify-content: center;
-gap: 1rem;
-margin: 0;
-}
-nav a {
-text-decoration: none;
-color: #fff;
-font-weight: 600;
-padding: 0.4rem 1.5rem;
-border-radius: 10px;
-transition: background 0.25s ease;
-}
-nav a:hover {
-background: var(--nav-hover);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+html, body {
+  height: 100%;
+  font-family: 'Merriweather', serif;
+  background: var(--body-bg);
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ========================
+Header & Navigation
+======================== */
+header {
+  background: var(--primary-blue);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#course-title {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+nav {
+  background-color: #74787c;
+  padding: 0.75rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.4rem 1.5rem;
+  border-radius: 10px;
+  transition: background 0.25s ease;
+}
+
+nav a:hover {
+  background: var(--nav-hover);
+}
 
 /* ========================
 Main Layout
 ======================== */
 main {
-max-width: var(--max-width);
-margin: 2rem auto;
-padding: 0 1rem;
-display: grid;
-grid-template-columns: 2fr 1fr;
-gap: 2rem;
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
 }
+
 main h1 {
-grid-column: 1 / -1;
-text-align: center;
-font-size: 2.3rem;
-font-weight: 600;
-margin: 1rem 0 2rem;
-font-family: 'Poppins', sans-serif;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin: 1rem 0 2rem;
 }
+
+/* ========================
+Cards
+======================== */
 .card {
-background: #fff;
-border: 1px solid var(--card-border);
-border-radius: var(--card-radius);
-overflow: hidden;
-padding-bottom: 1rem;
-box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  background: var(--card-bg-light);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
 }
+
 .card h2 {
-background: var(--primary-blue);
-color: #fff;
-text-align: center;
-padding: 0.7rem;
-font-size: 1.2rem;
-font-weight: 600;
-margin-bottom: 1rem;
+  background: var(--primary-blue);
+  color: #fff;
+  text-align: center;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
 }
+
+/* ========================
+Card Content Flex Layout
+======================== */
 .card-content {
-display: flex;
-gap: 1.25rem;
-padding: 0 1.2rem;
-align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center; /* vertically centers images with text */
+  flex-wrap: wrap;
+  padding: 1rem 0;
 }
-.card-content img {
-width: 150px;
-border-radius: 10px;
-box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+/* About Me Section: text left, profile right */
+.card-content.about-me {
+  background: var(--card-bg-light);
 }
+
+.card-content.about-me .text {
+  flex: 1;
+}
+
+.card-content.about-me img.profile {
+  order: 2;
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Separator line */
+.section-separator {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1.5rem 0;
+}
+
+/* Flag Section: image left, text right */
+.card-content.flag-section {
+  background: var(--card-bg-alt);
+  padding: 1rem;
+  border-radius: var(--card-radius);
+}
+
+.card-content.flag-section .text {
+  flex: 1;
+}
+
+.card-content.flag-section img.flag {
+  width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Card text */
 .card-content p {
-font-size: 1rem;
-line-height: 1.55;
+  font-size: 1rem;
+  line-height: 1.55;
 }
+
+/* Figures (optional images/captions) */
 figure {
-padding: 1rem;
-text-align: center;
+  padding: 1rem;
+  text-align: center;
 }
+
 figure img {
-width: 160px;
-display: block;
-margin: auto;
-border-radius: 8px;
-box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  width: 160px;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+
 figure figcaption {
-font-size: 0.85rem;
-margin-top: 0.5rem;
-color: #555;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: #555;
 }
+
 /* ========================
 Footer
 ======================== */
 footer {
-background: var(--footer-bg);
-color: white;
-text-align: center;
-padding: 1.6rem 0;
-margin-top: 3rem;
-font-size: 0.95rem;
-box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+  background: var(--footer-bg);
+  color: white;
+  text-align: center;
+  padding: 1.6rem 0;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
 }
-
 
 /* ========================
-Responsive
+Responsive Layout
 ======================== */
 @media (max-width: 850px) {
-main {
-grid-template-columns: 1fr;
-}
-nav ul {
-flex-direction: column;
-gap: 0.75rem;
-}
-.card-content {
-flex-direction: column;
-text-align: center;
-}
-.card-content img {
-width: 180px;
-}
-}
+  main {
+    grid-template-columns: 1fr;
+  }
 
-/* Basic reset and typography */
-:root{
---brand-blue:#1f4f6f;
---brand-accent:#ffd166;
---card-bg:#ffffff;
---muted:#6b6b6b;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-font-family: 'Merriweather', serif;
-margin:0;
-background:#f6f7f8;
-color:#222;
-line-height:1.45;
-}
-header{
-background:var(--brand-blue);
-color:white;
-padding:1rem 0.5rem;
-text-align:center;
-}
-#course-title{display:block;font-weight:700;font-family: 'Merriweather', serif;font-size:1.25rem}
-nav ul{display:flex;gap:1rem;justify-content:center;list-style:none;padding:0;margin:0.5rem 0}
-nav a{text-decoration:none;color:white;padding:0.5rem 0.75rem;border-radius:6px}
-nav a:hover{background:rgba(255,255,255,0.12)}
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 
+  .card-content {
+    flex-direction: column;
+    text-align: center;
+  }
 
-main{max-width:980px;margin:2rem auto;padding:0 1rem;display:grid;grid-template-columns:2fr 1fr;gap:1rem}
-.card{background:var(--card-bg);border:1px solid #ddd;border-radius:8px;padding:1rem}
-.card h2{text-align:center;background:var(--brand-blue);color:white;padding:0.6rem;margin:-1rem -1rem 1rem -1rem;border-top-left-radius:8px;border-top-right-radius:8px}
-.card-content{display:flex;gap:1rem;align-items:flex-start}
-.card-content img{width:120px;height:auto;border-radius:4px}
-figure{display:flex;gap:1rem;align-items:center;margin:1rem 0}
-figure img{width:100px}
-footer{background:var(--brand-blue);color:white;padding:1rem;text-align:center;margin-top:2rem}
+  .card-content.about-me img.profile,
+  .card-content.flag-section img.flag {
+    width: 180px;
+  }
 
-
-/* Responsive */
-@media (max-width:780px){
-main{grid-template-columns:1fr;}
-nav ul{flex-direction:column}
+  .section-separator {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
