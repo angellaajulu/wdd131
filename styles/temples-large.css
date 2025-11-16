@@ -1,18 +1,30 @@
 @media (min-width: 700px) {
 
-  /* NAV becomes horizontal */
+  /* DESKTOP HEADER */
+  header {
+    padding: 1.5rem 2rem;
+  }
+
+  /* DESKTOP NAV */
   nav {
     display: flex !important;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-end;
+    margin: 0;
   }
 
   #hamburger {
     display: none;
   }
 
-  /* GRID: more columns */
+  nav a {
+    padding: 0.5rem 1rem;
+  }
+
+  /* DESKTOP GRID */
   .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }
