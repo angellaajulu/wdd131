@@ -18,7 +18,7 @@ header {
   background-color: #4b006e; /* BYUI example purple */
   color: white;
   width: 100%;
-  padding: 1rem;
+  padding: 0.7rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@ header h1 {
 
 /* HAMBURGER */
 #hamburger {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   background: none;
   color: white;
   border: none;
@@ -42,8 +42,8 @@ header h1 {
 nav {
   display: none;
   flex-direction: column;
-  width: 100%;
-  margin-top: 1rem;
+  background-color: #4b006e;
+  padding-top: 1rem;
 }
 
 nav a {
@@ -93,4 +93,10 @@ footer {
   color: white;
   text-align: center;
   font-size: 0.9rem;
+}
+
+.site-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
 }
