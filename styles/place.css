@@ -1,109 +1,141 @@
-/* COLORS */
+/* --------------------------
+   :root (CSS variables)
+   -------------------------- */
 :root {
-    --uganda-green: #0b6623;
-    --title-bg: rgba(11, 102, 35, 0.9);
-    --card-bg: rgba(255, 255, 255, 0.88);
+    --primary-green: #0b6623;
+    --title-bg: rgba(11, 102, 35, 0.95);
+    --card-bg: rgba(255,255,255,0.88);
     --footer-bg: #a8002c;
+    --max-content-width: 1100px;
 }
 
-/* GENERAL */
+/* --------------------------
+   GLOBAL
+   -------------------------- */
+* { box-sizing: border-box; }
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #e5e5e5;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e9f6e7;
+    color: #111;
 }
 
 /* HEADER */
 header {
-    background: var(--uganda-green);
-    padding: 2rem 0;
+    background: var(--primary-green);
     text-align: center;
+    padding: 2rem 0;
 }
-
 header h1 {
-    margin: 0;
-    color: white;
+    color: #fff;
     font-size: 2.6rem;
-    font-weight: bold;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.4rem;
+}
+/* ::after pseudo-element decoration under the H1 (assignment requirement) */
+header h1::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 6px;
+    background: #f0f7f0;
+    margin: 10px auto 0;
+    border-radius: 3px;
+    opacity: 0.9;
 }
 
-/* HERO IMAGE SECTION */
+/* MAIN / HERO */
+main {
+    display: flex;
+    justify-content: center;
+}
 .hero {
     position: relative;
+    max-width: var(--max-content-width);
+    width: 100%;
 }
 
+/* responsive picture image */
 .hero img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-/* CARDS (float over the hero image) */
+/* --------------------------
+   FLOATING CARDS
+   -------------------------- */
 .card {
-    position: absolute;
+    position: absolute; /* absolutely positioned w.r.t .hero */
     width: 260px;
-    padding: 1rem;
     background: var(--card-bg);
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    backdrop-filter: blur(5px);
+    padding: 1rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    font-size: 0.95rem;
 }
 
-/* CARD TITLE BAR */
+/* Title bar (green) */
 .card-title {
-    background: var(--title-bg);
-    color: white;
-    padding: 0.6rem 0.8rem;
-    font-size: 1.3rem;
-    border-radius: 6px;
-    margin-bottom: 1rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    background: var(--title-bg);
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    margin: 0 0 0.9rem 0;
+    font-size: 1.15rem;
+    font-weight: 700;
 }
 
+/* small wrapper for left part and icon spacing */
+.card-title .title-left { margin-right: .5rem; }
+.card-title .title-icon { display: inline-flex; align-items:center; }
+
+/* Data card: upper-left (match screenshot) */
 .data-card {
     top: 40px;
     left: 40px;
 }
 
+/* Weather card: bottom-right overlay on image */
 .weather-card {
     bottom: 40px;
     right: 40px;
 }
 
-/* LIST STYLE */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    margin: 0.4rem 0;
-}
+/* lists */
+ul { list-style: none; padding: 0; margin: 0; }
+li { margin: 0.35rem 0; }
 
 /* FOOTER */
 footer {
     background: var(--footer-bg);
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-    font-size: 1rem;
+    padding: 1.25rem 1rem;
+    margin-top: 1.25rem;
 }
 
-/* MOBILE RESPONSIVE */
+/* --------------------------
+   RESPONSIVE
+   -------------------------- */
+@media (max-width: 900px) {
+    :root { --max-content-width: 900px; }
+    .data-card { left: 20px; top: 30px; }
+    .weather-card { right: 20px; bottom: 30px; }
+}
 @media (max-width: 700px) {
-
+    /* stack cards below image (mobile friendly) */
     .card {
         position: static;
-        width: 90%;
-        width: 90%;
+        width: calc(100% - 40px);
         margin: 1rem auto;
     }
-
-    .hero {
-        padding-bottom: 1rem;
-    }
+    .hero { padding-bottom: 1rem; }
 }
