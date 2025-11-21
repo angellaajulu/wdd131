@@ -49,7 +49,7 @@ header h1 {
     backdrop-filter: blur(5px);
 }
 
-/* CARD TITLE BAR (matches screenshot) */
+/* CARD TITLE BAR */
 .card-title {
     background: var(--title-bg);
     color: white;
@@ -62,7 +62,6 @@ header h1 {
     gap: 8px;
 }
 
-/* EXACT POSITIONING LIKE SCREENSHOT */
 .data-card {
     top: 40px;
     left: 40px;
