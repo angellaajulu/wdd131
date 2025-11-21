@@ -1,79 +1,109 @@
-/* --- GENERAL LAYOUT --- */
+/* COLORS */
+:root {
+    --uganda-green: #0b6623;
+    --title-bg: rgba(11, 102, 35, 0.9);
+    --card-bg: rgba(255, 255, 255, 0.88);
+    --footer-bg: #a8002c;
+}
+
+/* GENERAL */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: gray;
-    color: black;
+    background: #e5e5e5;
 }
 
-/* --- HEADER --- */
+/* HEADER */
 header {
-    background-color: green; 
+    background: var(--uganda-green);
+    padding: 2rem 0;
     text-align: center;
-    padding: 1rem 0;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
-    color: yellow;
+    color: white;
+    font-size: 2.6rem;
     font-weight: bold;
 }
 
-/* --- HERO IMAGE --- */
+/* HERO IMAGE SECTION */
+.hero {
+    position: relative;
+}
+
 .hero img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
 }
 
-/* --- FLOATING CARDS --- */
+/* CARDS (float over the hero image) */
 .card {
     position: absolute;
-    width: 300px;
-    background: #e7e753; 
+    width: 260px;
     padding: 1rem;
-    border-radius: 6px;
-    font-size: 1rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    backdrop-filter: blur(5px);
 }
 
+/* CARD TITLE BAR (matches screenshot) */
 .card-title {
-    background: black;
+    background: var(--title-bg);
     color: white;
-    padding: 0.4rem 1rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.3rem;
     border-radius: 6px;
-    font-size: 1.4rem;
-    font-weight: bold;
+    margin-bottom: 1rem;
     display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* --- LEFT (DATA) CARD POSITION --- */
+/* EXACT POSITIONING LIKE SCREENSHOT */
 .data-card {
-    top: 150px;
-    left: 20px;
+    top: 40px;
+    left: 40px;
 }
 
-/* --- RIGHT (WEATHER) CARD POSITION --- */
 .weather-card {
-    top: 300px;
-    right: 20px;
+    bottom: 40px;
+    right: 40px;
 }
 
-/* --- LIST STYLE --- */
+/* LIST STYLE */
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 li {
     margin: 0.4rem 0;
 }
 
-/* --- FOOTER --- */
+/* FOOTER */
 footer {
-    padding: 1rem;
-    background: #111;
+    background: var(--footer-bg);
     color: white;
     text-align: center;
-    margin-top: 3rem;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 700px) {
+
+    .card {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .hero {
+        padding-bottom: 1rem;
+    }
 }

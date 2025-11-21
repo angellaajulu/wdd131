@@ -4,53 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uganda — The Pearl of Africa</title>
-    <meta name="description" content="Uganda — the Pearl of Africa: lush landscapes, vibrant culture, and abundant wildlife." />
-    <meta name="author" content="Angella Evelyn Ajulu" />
+    <meta name="description" content="Uganda — the Pearl of Africa: lush landscapes, vibrant culture, and abundant wildlife.">
+    <meta name="author" content="Angella Evelyn Ajulu">
+
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
+
     <header>
         <h1>Uganda</h1>
     </header>
 
-    <!-- FULL-WIDTH HERO IMAGE -->
-    <section class="hero">
-        <img src="images/hero-large.webp" alt="Uganda landscape">
-    </section>
+    <main>
 
-    <!-- LEFT DATA CARD -->
-    <section class="data-card card">
-        <h2 class="card-title">Data</h2>
+        <!-- HERO SECTION WITH CARDS INSIDE -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 600px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1200px)">
+                <img src="images/hero-large.webp" alt="Uganda landscape">
+            </picture>
 
-        <ul>
-            <li><strong>Area:</strong> 241,038 km²</li>
-            <li><strong>Population:</strong> Approximately 48.6 million</li>
-            <li><strong>Capital:</strong> Kampala</li>
-            <li><strong>Languages:</strong> English, Swahili, Luganda</li>
-            <li><strong>Currency:</strong> Ugandan Shilling (UGX)</li>
-            <li><strong>Time Zone:</strong> EAT (UTC+3)</li>
-            <li><strong>Calling Code:</strong> +256</li>
-            <li><strong>Internet TLD:</strong> .ug</li>
-        </ul>
-    </section>
+            <!-- DATA CARD (Top Left) -->
+            <article class="card data-card">
+                <h2 class="card-title">Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 241,038 km²</li>
+                    <li><strong>Population:</strong> ~48.6 million</li>
+                    <li><strong>Capital:</strong> Kampala</li>
+                    <li><strong>Languages:</strong> English, Swahili, Luganda</li>
+                    <li><strong>Currency:</strong> Ugandan Shilling (UGX)</li>
+                    <li><strong>Time Zone:</strong> EAT (UTC+3)</li>
+                    <li><strong>Calling Code:</strong> +256</li>
+                    <li><strong>Internet TLD:</strong> .ug</li>
+                </ul>
+            </article>
 
-    <!-- RIGHT WEATHER CARD -->
-    <section class="weather-card card">
-        <h2 class="card-title">Weather 🌦</h2>
+            <!-- WEATHER CARD (Bottom Right) -->
+            <article class="card weather-card">
+                <h2 class="card-title">Weather <span class="icon">🌤️</span></h2>
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temp">26°C</span></li>
+                    <li><strong>Humidity:</strong> 65%</li>
+                    <li><strong>Wind:</strong> <span id="wind">10 km/h</span></li>
+                    <li><strong>Conditions:</strong> Mostly Clear</li>
+                    <li><strong>Wind Chill:</strong> <span id="windchill">N/A</span></li>
+                </ul>
+            </article>
 
-        <ul>
-            <li><strong>Current Temperature:</strong> <span id="temp">26°C</span></li>
-            <li><strong>Humidity:</strong> 65%</li>
-            <li><strong>Wind Speed:</strong> <span id="wind">10 km/h</span></li>
-            <li><strong>Weather Conditions:</strong> Mostly Clear</li>
-            <li><strong>Wind Chill:</strong> <span id="windchill">N/A</span></li>
-        </ul>
-    </section>
+        </section>
+
+    </main>
 
     <footer>
-        ©2025🎀 <span id="year"></span> Angella Evelyn Ajulu 🎀 Uganda  
+        ©2025 🎀 <span id="year"></span> Angella Evelyn Ajulu 🎀 Uganda  
         <br>Last Modified: <span id="last-modified"></span>
     </footer>
 
