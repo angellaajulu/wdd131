@@ -96,8 +96,7 @@ main {
 /* small wrapper for left part and icon spacing */
 .card-title .title-left { margin-right: .5rem; }
 .card-title .title-icon { display: inline-flex; align-items:center; }
-
-/* Data card: upper-left (match screenshot) */
+ 
 .data-card {
     top: 40px;
     left: 40px;
@@ -107,6 +106,12 @@ main {
 .weather-card {
     bottom: 40px;
     right: 40px;
+}
+
+.weather-card .title-icon img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
 }
 
 /* lists */
