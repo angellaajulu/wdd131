@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album Filtered</title>
+  <meta name="description" content="Temple Album showcasing temples around the world with responsive layout and filtering.">
+  <meta name="author" content="Angella Evelyn Ajulu">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Temple Album</h1>
+
+    <nav id="navMenu">
+        <ul>
+            <li><a href="#" data-filter="home">Home</a></li>
+            <li><a href="#" data-filter="old">Old</a></li>
+            <li><a href="#" data-filter="new">New</a></li>
+            <li><a href="#" data-filter="large">Large</a></li>
+            <li><a href="#" data-filter="small">Small</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card-grid" id="temple-cards-container"></div>
+  </main>
+
+  <footer>
+    <p>©2025 • <span id="currentyear"></span> Angella Evelyn Ajulu • Uganda</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>
