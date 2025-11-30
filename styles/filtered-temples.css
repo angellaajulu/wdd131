@@ -49,7 +49,7 @@ nav a:hover {
 }
 
 /* -------------------------------------------------
-   CARD GRID — MATCHES SCREENSHOT
+   CARD GRID
 ---------------------------------------------------*/
 .card-grid {
   display: grid;
@@ -61,7 +61,7 @@ nav a:hover {
 }
 
 /* -------------------------------------------------
-   CARD — EXACT SAMPLE MATCH
+   CARD 
 ---------------------------------------------------*/
 .temple-card {
   background-color: #eeeeee;
@@ -103,7 +103,6 @@ nav a:hover {
   font-size: 1em;
 }
 
-/* Image placed AT THE BOTTOM */
 .temple-card img {
   width: 95%;
   max-width: 420px;

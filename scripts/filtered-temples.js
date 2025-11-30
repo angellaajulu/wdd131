@@ -68,7 +68,7 @@ const temples = [
 // Display Function
 function displayTemples(templeArray) {
   const container = document.getElementById("temple-cards-container");
-  container.innerHTML = ""; // Clear previous cards
+  container.innerHTML = ""; 
 
   templeArray.forEach(temple => {
     const card = document.createElement("div");
