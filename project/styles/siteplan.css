@@ -1,0 +1,47 @@
+/* Color Scheme */
+:root {
+  --primary: #2d6a4f;
+  --secondary: #b7e4c7;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--secondary);
+  margin: 0;
+  padding: 20px;
+  max-width: 900px;
+  color: #1b3a2a;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+}
+
+.color-box {
+  width: 120px;
+  height: 40px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.primary { background-color: var(--primary); }
+.secondary { background-color: var(--secondary); }
+
+.wireframe {
+  border: 2px dashed var(--primary);
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.wireframe img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  display: block;
+  margin: 10px 0;
+}
