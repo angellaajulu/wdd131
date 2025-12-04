@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Review Form</title>
   <meta name="description" content="A product review form allowing users to share their experience with selected products.">
   <meta name="author" content="Angella Evelyn Ajulu">
-  <link rel="stylesheet" href="styles/form.css" />
+
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
@@ -29,19 +31,19 @@
 
     <div class="stars">
       <input type="radio" id="rate5" name="rating" value="5" required>
-      <label for="rate5">☆</label>
+      <label for="rate5">★</label>
 
-      <input type="radio" id="rate4" name="rating" value="4">
-      <label for="rate4">☆</label>
+      <input type="radio" id="rate4" name="rating" value="4" required>
+      <label for="rate4">★</label>
 
-      <input type="radio" id="rate3" name="rating" value="3">
-      <label for="rate3">☆</label>
+      <input type="radio" id="rate3" name="rating" value="3" required>
+      <label for="rate3">★</label>
 
-      <input type="radio" id="rate2" name="rating" value="2">
-      <label for="rate2">☆</label>
+      <input type="radio" id="rate2" name="rating" value="2" required>
+      <label for="rate2">★</label>
 
-      <input type="radio" id="rate1" name="rating" value="1">
-      <label for="rate1">☆</label>
+      <input type="radio" id="rate1" name="rating" value="1" required>
+      <label for="rate1">★</label>
     </div>
   </fieldset>
 
@@ -51,23 +53,38 @@
 
   <!-- FEATURES -->
   <fieldset id="features">
-    <legend>Useful Features</legend>
+    <legend>Which features did you find useful? <small>(Check all that apply)</small></legend>
 
-    <label><input type="checkbox" name="features" value="durable"> Durable</label>
-    <label><input type="checkbox" name="features" value="lightweight"> Lightweight</label>
-    <label><input type="checkbox" name="features" value="fast"> Fast</label>
-    <label><input type="checkbox" name="features" value="reliable"> Reliable</label>
+    <div class="feature-item">
+      <input type="checkbox" id="durable" name="features" value="Durability">
+      <label for="durable">Durability</label>
+    </div>
+
+    <div class="feature-item">
+      <input type="checkbox" id="easy" name="features" value="Ease of Use">
+      <label for="easy">Ease of Use</label>
+    </div>
+
+    <div class="feature-item">
+      <input type="checkbox" id="performance" name="features" value="Performance">
+      <label for="performance">Performance</label>
+    </div>
+
+    <div class="feature-item">
+      <input type="checkbox" id="design" name="features" value="Design">
+      <label for="design">Design</label>
+    </div>
   </fieldset>
 
   <!-- REVIEW -->
-  <label for="reviewText">Written Review</label>
+  <label for="reviewText">Written Review <small>(Optional)</small></label>
   <textarea id="reviewText" name="reviewText" rows="4"></textarea>
 
   <!-- USER NAME -->
-  <label for="userName">Your Name</label>
+  <label for="userName">Your Name <small>(Optional)</small></label>
   <input type="text" id="userName" name="userName">
 
-  <input type="submit" value="Submit Review">
+  <input type="submit" value="Post Review">
 </form>
 </main>
 
@@ -76,6 +93,5 @@
   <p>Last Modified: <span id="lastModified"></span></p>
 </footer>
 
-<script src="scripts/form.js"></script>
 </body>
 </html>
