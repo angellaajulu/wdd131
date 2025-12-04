@@ -23,14 +23,13 @@ header {
   background: #604ea1;
   text-align: center;
   padding: 1.3rem 0;
-  box-shadow: white;
   color: white;
 }
 
 header h1 {
   font-size: 1.6rem;
   font-weight: 600;
-  color: whites;
+  color: white;
 }
 
 /* -----------------
