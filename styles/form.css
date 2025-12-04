@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ebe7e8;
+  padding: 20px;
+  line-height: 1.5;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f5f1f1;
+  background:#461891 ;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+  background: rgb(228, 218, 235);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+/* RATING STARS */
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.stars input:checked ~ label {
+  color: gold;
+}
+
+/* BUTTON */
+input[type="submit"], .back-btn {
+  background: #0077cc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type="submit"]:hover, .back-btn:hover {
+  background: #005fa3;
+  
+}
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #f5f1f1;
+  background:#461891 ;
+}
+
+/* === DESKTOP RESPONSIVE BREAKPOINT === */
+@media (min-width: 768px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  label, textarea, fieldset, .rating {
+    grid-column: span 2;
+  }
+
+  input[type="submit"] {
+    grid-column: span 2;
+    font-size: 1.1rem;
+  }
+}
