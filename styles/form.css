@@ -1,3 +1,4 @@
+/* ========== GLOBAL STYLING ========== */
 * {
   margin: 0;
   padding: 0;
@@ -5,57 +6,96 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #ebe7e8;
-  padding: 20px;
-  line-height: 1.5;
-  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f3f3;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
+  background: #354b5e;
+  color: #fff;
   text-align: center;
-  margin-bottom: 20px;
-  color: #f5f1f1;
-  background:#461891 ;
+  padding: 1.5rem;
 }
 
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* ========== FORM CONTAINER ========== */
 main {
-  max-width: 700px;
-  margin: auto;
-  background: rgb(228, 218, 235);
-  padding: 20px;
-  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  background: #e5e2e9;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* FORM */
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
 }
 
+/* LABELS & INPUTS */
 label {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
 }
 
 .required {
   color: red;
-  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-/* RATING STARS */
+input, select, textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ========== SUBMIT BUTTON ========== */
+input[type="submit"] {
+  background: #3b71a0;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background: #1f2e39;
+}
+
+/* ========== STAR RATING ========== */
+.rating legend {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
 .stars {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .stars input {
@@ -63,54 +103,74 @@ input, select, textarea {
 }
 
 .stars label {
-  font-size: 2rem;
-  cursor: pointer;
+  color: #444141;
+  transition: 0.3s;
 }
 
-.stars input:checked ~ label {
-  color: gold;
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: #f4b400;
 }
 
-/* BUTTON */
-input[type="submit"], .back-btn {
-  background: #0077cc;
-  color: white;
-  padding: 12px;
-  border: none;
+/* ========== FEATURES CHECKBOX ALIGNMENT ========== */
+#features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.5rem 0;
+}
+
+#features label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+}
+
+#features input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #1b2630;
+}
+
+/* ========== THANK YOU PAGE BUTTON ========== */
+.back-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1rem;
+  background: #354b5e;
+  color: #fff;
   border-radius: 6px;
-  margin-top: 10px;
-  cursor: pointer;
-  text-align: center;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
-input[type="submit"]:hover, .back-btn:hover {
-  background: #005fa3;
-  
+.back-btn:hover {
+  background: #1f2e39;
 }
 
-
-/* FOOTER */
+/* ========== FOOTER ========== */
 footer {
   text-align: center;
-  margin-top: 20px;
-  color: #f5f1f1;
-  background:#461891 ;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  margin-top: auto;
+  background: #354b5e;
+  color: white;
 }
 
-/* === DESKTOP RESPONSIVE BREAKPOINT === */
+footer p {
+  margin: 3px 0;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
 @media (min-width: 768px) {
-  form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  main {
+    border-radius: 14px;
   }
 
-  label, textarea, fieldset, .rating {
-    grid-column: span 2;
-  }
-
-  input[type="submit"] {
-    grid-column: span 2;
-    font-size: 1.1rem;
+  h1 {
+    font-size: 2rem;
   }
 }
