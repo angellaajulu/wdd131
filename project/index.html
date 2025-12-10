@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home Gardening Hub provides beginner gardeners with tips, guides, and resources to grow a home garden effectively and sustainably.">
+    <title>Home Gardening Hub</title>
+    <meta name="author" content="Angella Evelyn About">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logos.png" alt="Home Gardening Hub Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <img src="images/plants/plant1.jpg" alt="Beautiful Home Garden" loading="lazy">
+            <div class="hero-text">
+                <h1>Welcome to Home Gardening Hub</h1>
+                <p>Practical tips and guides for beginner gardeners.</p>
+            </div>
+        </section>
+
+
+        <section id="intro">
+            <h2>Gardening Tip of the Day</h2>
+            <p id="tipOutput"></p>
+            <button id="showTipBtn">Show Another Tip</button>
+        </section>
+
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>©2025 🎀Angella Evelyn Ajulu🎀 Uganda</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
